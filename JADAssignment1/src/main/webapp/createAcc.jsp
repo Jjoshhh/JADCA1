@@ -10,6 +10,10 @@
 <link rel="stylesheet" href="./css/userLogin.css" />
 <title>Document</title>
 </head>
+<%
+	String test = request.getContextPath();
+	out.print(test);
+%>
 <body class="bg-cover">
 	<div id="alertContainer"
 		class="hidden bg-red-500 text-white px-4 py-2 rounded-md fixed bottom-4 right-4"></div>

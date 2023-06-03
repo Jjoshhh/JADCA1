@@ -46,8 +46,8 @@ public class AccountCreation extends HttpServlet {
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		try {
-			String first_name = request.getParameter("first_name");
-			String last_name = request.getParameter("last_name");
+			String first_name = request.getParameter("firstName");
+			String last_name = request.getParameter("lastName");
 			String username = request.getParameter("username");
 			String password = request.getParameter("password");
 			String email = request.getParameter("email");
@@ -74,9 +74,8 @@ public class AccountCreation extends HttpServlet {
 			ResultSet rs = pstmt.executeQuery();
 
 			// Step 6: Process Result
-			while (rs.next()) {
-				response.sendRedirect(request.getContextPath() + "/login.jsp");
-			}
+			response.sendRedirect(request.getContextPath() + "/login.jsp");
+			
 			// Step 7: Close connection
 			conn.close();
 		} catch (Exception e) {
