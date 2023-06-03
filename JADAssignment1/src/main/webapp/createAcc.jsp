@@ -3,18 +3,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
+<meta charset="ISO-8859-1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="./css/userLogin.css" />
 <title>Document</title>
 </head>
-<%
-	String test = request.getContextPath();
-	out.print(test);
-%>
 <body class="bg-cover">
+<%
+	String context = request.getContextPath();
+%>
 	<div id="alertContainer"
 		class="hidden bg-red-500 text-white px-4 py-2 rounded-md fixed bottom-4 right-4"></div>
 
@@ -27,7 +26,7 @@
 					<h1
 						class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
 						Create an account</h1>
-					<form action="<%=request.getContextPath()%>/AccountCreation" method="post" class="space-y-4 md:space-y-6 grid">
+					<form action="<%=context%>/AccountCreate" method="post" class="space-y-4 md:space-y-6 grid">
 						<div class="grid grid-cols-2 gap-6">
 							<div>
 								<label for="firstName"
